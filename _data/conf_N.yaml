@@ -1,0 +1,15 @@
+main:
+
+  - title: "Analyse d'atteignabilité des systèmes (max,+)-linéaires à l'aide des polyèdres tropicaux"
+    authors: <strong>Guilherme Espindola Winck</strong>, Mehdi Lhommeau, Laurent Hardouin
+    conference_short: MSR 19
+    conference: Modélisation des Systèmes Réactifs (MSR 19), 2O19, Angers, France
+    pdf: https://hal.science/hal-02373597/document
+    bibtex: https://hal.science/hal-02373597v1/bibtex
+
+  - title: "Sur l'estimation d'état des systèmes max-plus"
+    authors: <strong>Guilherme Espindola Winck</strong>, Laurent Hardouin, Mehdi Lhommeau
+    conference_short: MSR 21
+    conference: Modélisation des Systèmes Réactifs (MSR 21), 2O21, Paris, France
+    pdf: https://univ-angers.hal.science/hal-03782830/document
+    bibtex: https://univ-angers.hal.science/hal-03782830v1/bibtex
