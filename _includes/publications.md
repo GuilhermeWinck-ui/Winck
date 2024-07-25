@@ -203,3 +203,5 @@
 <br>
 
 {% endfor %}
+
+<h4>More details can be found at my <a href="https://www.researchgate.net/profile/Guilherme-Espindola-Winck">ResearchGate profile</a></h4>
