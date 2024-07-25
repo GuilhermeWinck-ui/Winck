@@ -1,7 +1,7 @@
 main:
 
   - title: "Stochastic filtering scheme of implicit forms of uncertain Max-Plus linear systems"
-    authors: <strong>Guilherme Espindola Winck</strong>, Laurent Hardouin, Mehdi Lhommeau, Rafael Santos-Mendes
+    authors: <strong>Guilherme Espindola-Winck</strong>, Laurent Hardouin, Mehdi Lhommeau, Rafael Santos-Mendes
     conference: IEEE Transactions on Automatic Control
     pdf: https://univ-angers.hal.science/hal-03782816v1/document
     bibtex: https://univ-angers.hal.science/hal-03782816v1/bibtex
