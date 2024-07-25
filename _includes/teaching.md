@@ -8,6 +8,7 @@
   -Industrial Local Networks and Distributed Automation<br>
   -Petri Nets<br>
   -Industrial Computing and Real-Time Systems<br>
+  -Supervision of industrial systems<br>
 </ul>
 
 <p><a href="https://ecole.centralelille.fr">Ecole Centrale de Lille</a><p/>
