@@ -19,7 +19,7 @@ main:
     conference_short: ECC 2022
     conference: 2022 European Control Conference (ECC), London, United Kingdom
     pdf: https://univ-angers.hal.science/hal-03782814/document
-    bibtex: hhttps://univ-angers.hal.science/hal-03782814/bibtex
+    bibtex: https://univ-angers.hal.science/hal-03782814/bibtex
 
   - title: "Comparing Disjunctive and Concise Approaches for Set-Guaranteed Estimation in Max-Plus Linear Systems"
     authors: <strong>Guilherme Espindola Winck</strong>, Renato Markele, Laurent Hardouin, Mehdi Lhommeau 
