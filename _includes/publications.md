@@ -204,4 +204,4 @@
 
 {% endfor %}
 
-<h4>Further details are available on my<a href="https://www.researchgate.net/profile/Guilherme-Espindola-Winck">ResearchGate profile</a>.</h4>
+<h4>Further details are available on my <a href="https://www.researchgate.net/profile/Guilherme-Espindola-Winck">ResearchGate profile</a>.</h4>
