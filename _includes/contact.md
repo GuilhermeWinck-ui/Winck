@@ -7,7 +7,7 @@ CS 20048
 59651 Villeneuve d'Ascq cedex
 FRANCE</a>
 <br />
-<strong>Office Location:</strong> Centrale Lille Institute - C-329 
+<strong>Office Location:</strong> Ecole Centrale de Lille - C-329 
 <br />
 <strong>Email:</strong> <email>guilherme.espindola (at) centralelille.fr</email>
 <br />
