@@ -6,17 +6,18 @@
 <ul>
   -Automation (PLC programming) <br>
   -Industrial Local Networks and Distributed Automation<br>
-  -Petri Nets<br>
+  -Petri Nets (PN) and PN-based Distributed Automation<br>
   -Industrial Computing and Real-Time Systems<br>
-  -Supervision of industrial systems<br>
+  -Supervision of Industrial Systems<br>
 </ul>
 
 <p><a href="https://ecole.centralelille.fr">Ecole Centrale de Lille</a><p/>
 <ul>
   -Automation (PLC programming) <br>
-  -Petri Nets<br>
+  -Discrete Event Systems : Petri Nets, Idempotent Semirings and Automata Theory<br>
   -Scheduling and Production Planning<br>
-  -Python programming<br>
+  -Supervision of Industrial Systems<br>
+  -High Level Python Programming<br>
   -Machine Learning and Deep Learning<br>
   -Industrial Computing and Real-Time Systems<br>
 </ul>
