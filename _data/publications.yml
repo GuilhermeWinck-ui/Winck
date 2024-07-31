@@ -2,10 +2,10 @@ main:
 
   - title: "Stochastic Filtering Scheme of Implicit Forms of Uncertain Max-Plus Linear Systems"
     authors: <strong>Guilherme Espindola-Winck</strong>, Laurent Hardouin, Mehdi Lhommeau, Rafael Santos-Mendes
-    conference: IEEE Transactions on Automatic Control
+    conference: 2022, IEEE Transactions on Automatic Control
     pdf: https://univ-angers.hal.science/hal-03782816v1/document
     bibtex: https://univ-angers.hal.science/hal-03782816v1/bibtex
 
   - title: "On the Set-Estimation of Uncertain Max-Plus Linear Systems"
     authors: <strong>Guilherme Espindola-Winck</strong>, Laurent Hardouin, Mehdi Lhommeau
-    conference: Automatica <span style="color:red;">To Appear</span>
+    conference: 2024, Automatica <span style="color:red;">To Appear</span>
