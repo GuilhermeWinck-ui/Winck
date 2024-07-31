@@ -7,7 +7,7 @@ main:
     pdf: https://univ-angers.hal.science/hal-03994143v1/document
     bibtex: https://univ-angers.hal.science/hal-03994143v1/bibtex
 
-  - title: "Eﬀicient State-Estimation of Uncertain Max-Plus Linear Systems with High Observation Noise"
+  - title: "Efficient State-Estimation of Uncertain Max-Plus Linear Systems with High Observation Noise"
     authors: <strong>Guilherme Espindola-Winck</strong>, Renato Markele Ferreira Cândido, Laurent Hardouin, Mehdi Lhommeau 
     conference_short: WODES 2022
     conference: 16th IFAC Workshop on Discrete Event Systems WODES 2022, Prague, Czech Republic
