@@ -1,5 +1,12 @@
 main:
 
+  - title: "Comparing Disjunctive and Concise Approaches for Set-Guaranteed Estimation in Max-Plus Linear Systems"
+    authors: <strong>Guilherme Espindola-Winck</strong>, Laurent Hardouin, Mehdi Lhommeau 
+    conference_short: WODES 2024
+    conference: 17th IFAC Workshop on Discrete Event Systems WODES 2024, Rio de Janeiro, Brazil
+    pdf: https://univ-angers.hal.science/hal-04653065v1/document
+    bibtex: https://univ-angers.hal.science/hal-04653065v1/bibtex
+
   - title: "Criteria stochastic filtering of max-plus discrete event systems with bounded random variables"
     authors: <strong>Guilherme Espindola-Winck</strong>, Laurent Hardouin, Mehdi Lhommeau, Rafael Santos-Mendes
     conference_short: COSY 2022
@@ -20,11 +27,3 @@ main:
     conference: 2022 European Control Conference (ECC), London, United Kingdom
     pdf: https://univ-angers.hal.science/hal-03782814/document
     bibtex: https://univ-angers.hal.science/hal-03782814/bibtex
-
-  - title: "Comparing Disjunctive and Concise Approaches for Set-Guaranteed Estimation in Max-Plus Linear Systems"
-    authors: <strong>Guilherme Espindola-Winck</strong>, Laurent Hardouin, Mehdi Lhommeau 
-    conference_short: WODES 2024
-    conference: 17th IFAC Workshop on Discrete Event Systems WODES 2024, Rio de Janeiro, Brazil
-    pdf: https://univ-angers.hal.science/hal-04653065v1/document
-    bibtex: https://univ-angers.hal.science/hal-04653065v1/bibtex
-
