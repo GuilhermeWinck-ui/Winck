@@ -40,4 +40,10 @@ avatar: ./assets/img/guilherme-espindolawinck.jpeg
 #clustrmaps_id: CJD8XwsJhSyQ6sbsU-Gw0cNcUlbah7KW3xvHN2QlwW0
 
 # The following files will be removed from the generated website.
-
+exclude:
+  - build.sh
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - CNAME
