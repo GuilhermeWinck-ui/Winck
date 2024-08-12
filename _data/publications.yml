@@ -3,8 +3,6 @@ main:
   - title: "On the Set-Estimation of Uncertain Max-Plus Linear Systems"
     authors: <strong>Guilherme Espindola-Winck</strong>, Laurent Hardouin, Mehdi Lhommeau
     conference: 2024, Automatica <span style="color:red;">To Appear</span>
-    pdf: https://gespindola-winck.com
-    bibtex: https://gespindola-winck.com
 
   - title: "Stochastic Filtering Scheme of Implicit Forms of Uncertain Max-Plus Linear Systems"
     authors: <strong>Guilherme Espindola-Winck</strong>, Laurent Hardouin, Mehdi Lhommeau, Rafael Santos-Mendes
