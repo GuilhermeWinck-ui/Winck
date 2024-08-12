@@ -1,6 +1,6 @@
 main:
 
- - title: "Sur l'estimation d'état des systèmes max-plus"
+  - title: "Sur l'estimation d'état des systèmes max-plus"
     authors: <strong>Guilherme Espindola-Winck</strong>, Laurent Hardouin, Mehdi Lhommeau
     conference_short: MSR 21
     conference: Modélisation des Systèmes Réactifs (MSR 21), 2O21, Paris, France
