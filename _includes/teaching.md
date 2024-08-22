@@ -28,7 +28,7 @@
   <b> Industrial Innovation: </b><br>
   -Scheduling and Production Planning<br>
   -Modeling and Performance Evaluation of Production Systems Using Discrete Event System Simulation<br>
-  <b> Computer Science: <\b><br>
+  <b> Computer Science: </b><br>
   -High Level Python Programming<br>
   -Machine Learning and Deep Learning<br>
 </ul>
