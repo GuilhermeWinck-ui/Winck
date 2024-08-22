@@ -20,7 +20,7 @@
 
 <p><a href="https://ecole.centralelille.fr">Ecole Centrale de Lille</a><p/>
 <ul>
-  <b> Industrial Engineering </b><br>
+  <b> Industrial Engineering: </b><br>
   -Automation (PLC programming) <br>
   -Discrete Event Systems: Petri Nets, Idempotent Semirings and Automata Theory<br>
   -Industrial Computing and Real-Time Systems<br>
