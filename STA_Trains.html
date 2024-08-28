@@ -48,7 +48,7 @@
     let Speed = new Array();
 
     // let init=[10,20,30,40,50]
-    let init=[getRandomInt(0,L+1),getRandomInt(0,L+1),getRandomInt(0,L+1),getRandomInt(0,L+1),getRandomInt(0,L+1)]
+    let init=[getRandomInt(0,L+1),getRandomInt(0,L+1),getRandomInt(0,L+1)]
     init.sort(function(a, b){return a - b})
 
     /// this function is implemented in p5.js
@@ -163,7 +163,7 @@
         V[idx]=old_v;
       }else{
         Panne=1;
-        idx = getRandomInt(0,6);
+        idx = getRandomInt(0,4);
         old_v = V[idx];
         V[idx]=0;
         console.log("car", Colors[idx], "stopped")
