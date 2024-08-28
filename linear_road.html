@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linear Road with 5 Cars</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+  <script src="p5.min.js"></script>
+  <script src="math.js"></script>
+  <script src="car_lin.js"></script>
+</head>
+
+<body>
+  <main>
+    <button onclick="showLog()">Show Log</button>
+    <button onclick="stoc()">Stochastic Behaviour</button>
+  </main>
+</body>
+<script type="text/javascript">
+    let flag=1;
+    let Stoc=0;
+
+    // length of the road
+    let L = 800;
+    let aux_car, aux_v, aux_d, aux_c;
+
+    let V = [1,1,1,1,1]
+    let D = [40,20,100,200,170] // for now, do not change it
+    let Colors = ['blue','green','yellow','magenta','red']
+
+    let List_of_Cars = new Array();
+
+    let Speed = new Array();
+
+    /// this function is implemented in p5.js
+    function setup() {
+      createCanvas(800, 800);
+      // usual 0,0 origin is on the left upper corner, so go to the mid point 
+      origin = createVector(0, 400);
+      
+      for (var i=1; i<=5;i++){
+        List_of_Cars.push(new Car(0, Colors[i-1]))
+      }
+
+      frameRate(100);
+    }
+
+    function draw() {
+      background(0);
+
+      stroke(127,127,0);
+      strokeWeight(2);
+      fill(127,127,0);
+      rect(origin.x, origin.y-(L/16), L, L/8);
+
+      push()
+      translate(width / 2 - (L/16), height / 2 + L/20);
+      rotate(-PI / 4.0);
+      rect(-26, -26, 52, 170);
+      pop()
+
+      push()
+      translate(width / 2 + (L/3), height / 2 + L/20);
+      rotate(PI / 4.0);
+      rect(-26, -26, 52, 170);
+      pop()
+
+      push()
+      translate(532, 574);
+      // console.log(mouseX,mouseY)
+      circle(-26, -26, 155);
+      pop()
+
+      Speed.length=0;
+
+      for (var i=0; i<List_of_Cars.length;i++){
+        List_of_Cars[i].show(origin);
+
+        if (Stoc==0) {
+            /// each car has it own speed and security distance  
+            if (i<List_of_Cars.length-1){
+              xi_t1 = Math.min(List_of_Cars[i].dist+V[i],List_of_Cars[i+1].dist-D[i])
+            }else{
+              xi_t1 = List_of_Cars[List_of_Cars.length-1].dist+V[List_of_Cars.length-1] // no constraint for the leader
+            }
+        }else {
+            /// stochastic behavior
+            if (i<List_of_Cars.length-1){
+              xi_t1 = Math.min(List_of_Cars[i].dist+getRandomInt(V[i],V[i]+10),List_of_Cars[i+1].dist-D[i])
+            }else{
+              xi_t1 = List_of_Cars[List_of_Cars.length-1].dist+getRandomInt(V[List_of_Cars.length-1]) // no constraint for the leader
+            }
+        }
+
+
+        List_of_Cars[i].change(xi_t1); // HERE : implement min-plus traffic law (instead of move speed)
+
+        // HERE : based on the above constraints, indicate if cannot consider the reference speed
+
+        Speed.push(List_of_Cars[i].speed)
+      }
+      if (flag==1) {
+          console.log(Speed.reduce((a, b) => a + b, 0) / Speed.length)
+      }
+
+      for (var i=0; i<List_of_Cars.length;i++){
+
+        if (List_of_Cars[i].dist >= L) {
+            aux_car = List_of_Cars[i]
+            aux_car.dist = 0
+            aux_v = V[i]
+            aux_d = D[i]
+            aux_c = Colors[i]
+            List_of_Cars.splice(i, 1) // remove this element from the list
+            V.splice(i,1)
+            D.splice(i,1)
+            Colors.splice(i,1)
+            List_of_Cars.unshift(aux_car) // put it back but at the beginning of the list
+            V.unshift(aux_v)
+            D.unshift(aux_d)
+            Colors.unshift(aux_c)
+          }
+      }
+
+    }
+
+    function getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      val = Math.floor(Math.random() * (max - min) + min);
+      if (val<0){
+        val = 0;
+      }
+      return val // The maximum is exclusive and the minimum is inclusive
+    }
+
+    function showLog() {
+      if (flag==1){
+        flag=0;
+        console.clear()
+      }else{
+        flag=1;
+      }
+    }
+
+    function stoc() {
+      if (Stoc==1){
+        Stoc=0;
+      }else{
+        Stoc=1;
+      }
+    }
+
+    function changeV(color,val){
+      for (var i=0;i<Colors.length;i++){
+        if (color==Colors[i]){
+          ind = i;
+        }
+      }
+      V[ind]=val;
+    }
+
+</script>
+</html>
