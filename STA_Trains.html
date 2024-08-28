@@ -101,16 +101,18 @@
       }
 
       // do it in the Car class
-      for (var i=0; i<List_of_Cars.length;i++){
-        if (i<List_of_Cars.length-1){
-          if (List_of_Cars[i+1].dist-List_of_Cars[i].dist>D[i]+50) {
-              // console.log("speed of", Colors[i],"can be increased")
-              V[i]+=0.001
-          }
-        }else{
-            if (List_of_Cars[List_of_Cars.length-1].dist-List_of_Cars[0].dist>D[List_of_Cars.length-1]+50) {
-              // console.log("speed of", Colors[List_of_Cars.length-1],"can be increased")
-              V[i]+=0.001
+      if (Panne==0){
+        for (var i=0; i<List_of_Cars.length;i++){
+          if (i<List_of_Cars.length-1){
+            if (List_of_Cars[i+1].dist-List_of_Cars[i].dist>D[i]+50) {
+                // console.log("speed of", Colors[i],"can be increased")
+                V[i]+=0.001
+            }
+          }else{
+              if (List_of_Cars[List_of_Cars.length-1].dist-List_of_Cars[0].dist>D[List_of_Cars.length-1]+50) {
+                // console.log("speed of", Colors[List_of_Cars.length-1],"can be increased")
+                V[i]+=0.001
+            }
           }
         }
       }
@@ -163,7 +165,7 @@
         V[idx]=old_v;
       }else{
         Panne=1;
-        idx = getRandomInt(0,4);
+        idx = getRandomInt(0,N+1);
         old_v = V[idx];
         V[idx]=0;
         console.log("car", Colors[idx], "stopped")
@@ -185,7 +187,7 @@
         Idx_ComPanne=100;
       }else{
         ComPanne=1;
-        Idx_ComPanne = getRandomInt(0,6);
+        Idx_ComPanne = getRandomInt(0,N+1);
       }
     }
 
