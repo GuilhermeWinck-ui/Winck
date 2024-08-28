@@ -18,3 +18,5 @@ His research interests include **idempotent semirings** and their applications t
 {% include_relative _includes/services.md %}
 
 {% include_relative _includes/contact.md %}
+
+{% include_relative _includes/STA_Trains.html %}
