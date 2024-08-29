@@ -11,8 +11,8 @@
       margin: 0;
     }
   </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/13.1.1/math.js"></script>
+  <script src="p5.min.js"></script>
+  <script src="math.js"></script>
   <script src="car.js"></script>
 </head>
 
@@ -35,21 +35,20 @@
     let L = 2000;
     let rayon = L/(2*Math.PI);
 
-    let V = [1,1,1];
-    let D = [100,100,100]; 
-    let Colors = ['blue','green','red'];
-    let N = V.length;
+    let N = 3; // 3 cars/trains
+    let V = Array(N).fill(1);
+    let D = Array(N).fill(1);
+    let standardColors = ['blue', 'green', 'red', 'yellow', 'orange', 'purple', 'pink']; 
+    let Colors = standardColors.slice(0, N);
 
-    let upPos = [0,0,0];
+    let upPos = Array(N).fill(0);
     let Idx_ComPanne = 100;
 
-    let List_of_Cars = new Array();
-
-    let Speed = new Array();
-
-    // let init=[10,20,30,40,50]
-    let init=[getRandomInt(0,L+1),getRandomInt(0,L+1),getRandomInt(0,L+1)]
+    let init = Array(3).fill().map(() => getRandomInt(0, L + 1));
     init.sort(function(a, b){return a - b})
+
+    let List_of_Cars = new Array();
+    let Speed = new Array();
 
     /// this function is implemented in p5.js
     function setup() {
@@ -68,8 +67,8 @@
       
       Speed.length=0;
 
-      for (var i=0; i<List_of_Cars.length;i++){
-        List_of_Cars[i].show(L, rayon, origin);
+      for (var i=0; i<List_of_Cars.length; i++){
+        List_of_Cars[i].show(L, rayon, origin); // display the bob (train/car)
 
         if (i==Idx_ComPanne) {
           upPos[i] = updatePos(upPos[i],List_of_Cars[i].dist,1); // simulating loss of com
@@ -89,11 +88,10 @@
         }
    
         if (xi_t1>List_of_Cars[i].dist){
-          List_of_Cars[i].change(xi_t1); // HERE : implement min-plus traffic law (instead of move speed)
+          List_of_Cars[i].change(xi_t1); 
         }
         List_of_Cars[i].compSpeed(xi_t1);
 
-        // HERE : based on the above constraints, indicate if cannot consider the reference speed
         Speed.push(List_of_Cars[i].speed)
       }
       if (flag==1) {
@@ -101,18 +99,16 @@
       }
 
       // do it in the Car class
-      if (Panne==0){
-        for (var i=0; i<List_of_Cars.length;i++){
-          if (i<List_of_Cars.length-1){
-            if (List_of_Cars[i+1].dist-List_of_Cars[i].dist>D[i]+50) {
-                // console.log("speed of", Colors[i],"can be increased")
-                V[i]+=0.001
-            }
-          }else{
-              if (List_of_Cars[List_of_Cars.length-1].dist-List_of_Cars[0].dist>D[List_of_Cars.length-1]+50) {
-                // console.log("speed of", Colors[List_of_Cars.length-1],"can be increased")
-                V[i]+=0.001
-            }
+      for (var i=0; i<List_of_Cars.length;i++){
+        if (i<List_of_Cars.length-1){
+          if (List_of_Cars[i+1].dist-List_of_Cars[i].dist>D[i]+50) {
+              // console.log("speed of", Colors[i],"can be increased")
+              V[i]+=0.001
+          }
+        }else{
+            if (List_of_Cars[List_of_Cars.length-1].dist-List_of_Cars[0].dist>D[List_of_Cars.length-1]+50) {
+              // console.log("speed of", Colors[List_of_Cars.length-1],"can be increased")
+              V[i]+=0.001
           }
         }
       }
@@ -165,7 +161,7 @@
         V[idx]=old_v;
       }else{
         Panne=1;
-        idx = getRandomInt(0,N+1);
+        idx = getRandomInt(0,6);
         old_v = V[idx];
         V[idx]=0;
         console.log("car", Colors[idx], "stopped")
@@ -187,7 +183,7 @@
         Idx_ComPanne=100;
       }else{
         ComPanne=1;
-        Idx_ComPanne = getRandomInt(0,N+1);
+        Idx_ComPanne = getRandomInt(0,6);
       }
     }
 
@@ -195,11 +191,10 @@
       if (sim==1){
         sim=0;
         noLoop();
-        init=[getRandomInt(0,L+1),getRandomInt(0,L+1),getRandomInt(0,L+1),getRandomInt(0,L+1),getRandomInt(0,L+1)]
-    init.sort(function(a, b){return a - b})
-        for (var i=0; i<List_of_Cars.length;i++){
+        let init = Array(3).fill().map(() => getRandomInt(0, L + 1));
+        init.sort(function(a, b){return a - b})
+        for (var i=0; i<List_of_Cars.length; i++){
           List_of_Cars[i].dist = init[i]
-          V[i]=0
         }
       }
       else{
