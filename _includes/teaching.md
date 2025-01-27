@@ -23,8 +23,8 @@
   <b> Automation Engineering: </b><br>
   -Automation (PLC programming) <br>
   -Discrete Event Systems: Petri Nets, Idempotent Semirings and Automata Theory<br>
-  -Industrial Computing and Real-Time Systems<br>
   -Supervision of Industrial Systems<br>
+  -Industrial Computing and Real-Time Systems<br>
   <b> Industrial Innovation: </b><br>
   -Scheduling and Production Planning<br>
   -Modeling and Performance Evaluation of Production Systems using Discrete Event System Simulation<br>
