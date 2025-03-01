@@ -20,7 +20,7 @@
 </ul>
 
 <ul style="margin:0 0 5px;">
-  I am a member of the Technical/Programme Committee for the following conferences: <a href="https://msr2025.sciencesconf.org/resource/page/id/1">
+  I am a member of the Technical/Programme Committee for the following conferences: <a href="https://msr2025.sciencesconf.org"> ICMRE
 </a> and <a href="https://icmre.org"> ICMRE
 </a>
 </ul>
