@@ -9,6 +9,9 @@
 </a>, 
 <a href="https://link.springer.com/journal/10626
 ">JDEDS
+</a>,
+<a href="https://onlinelibrary.wiley.com/journal/10991239
+">International Journal of Robust and Nonlinear Control
 </a> and the conferences 
 <a href="https://www.alessandro-giua.it/WODES/
 ">WODES
