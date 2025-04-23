@@ -2,7 +2,10 @@ main:
 
   - title: "SMT-Based and Fixed-Point Approaches for State Estimation in Max-Plus Linear Systems"
     authors: <strong>Guilherme Espindola-Winck</strong>, Laurent Hardouin, Mehdi Lhommeau
-    conference: 2025, Journal of Discrete Event Dynamic Systems - Part of a collection: Recent Advances in Discrete Event Systems: Theory 2024
+    conference: 2025, Journal of Discrete Event Dynamic Systems 
+    pdf: https://hal.science/view/index/docid/5044091/document
+    bibtex: https://hal.science/view/index/docid/5044091/bibtex
+    doi: https://doi.org/10.1007/s10626-025-00413-w
 
   - title: "On the Set-Estimation of Uncertain Max-Plus Linear Systems"
     authors: <strong>Guilherme Espindola-Winck</strong>, Laurent Hardouin, Mehdi Lhommeau
