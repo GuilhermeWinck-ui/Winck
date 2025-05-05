@@ -6,9 +6,10 @@ main:
     conference: 8th IEEE-RAS International Conference on Soft Robotics (RoboSoft 2025), Lausanne, Switzerland <span style="color:red;">To Appear</span>
 
   - title: "Towards a Comfortable Model-based Control of a fleet of Communicated wheelchairs"
-    authors: Yehya Sharif, Gilles Tagne, Meziane Labri, <strong>Guilherme Espindola-Winck</strong>, Rochdi Merzouki, Christophe Sueur
+    authors: Yehya Sharif, Gilles Tagne, Meziane Labri, <strong>Guilherme Espindola</strong>, Rochdi Merzouki, Christophe Sueur
     conference_short: ICMRE 2025
-    conference: 11th International Conference on Mechatronics and Robotics Engineering (ICMRE 2025), Lille, France <span style="color:red;">To Appear</span>
+    conference: 11th International Conference on Mechatronics and Robotics Engineering (ICMRE 2025), Lille, France 
+    doi: https://doi.org/10.1109/ICMRE64970.2025.10976288
 
   - title: "Comparing Disjunctive and Concise Approaches for Set-Guaranteed Estimation in Max-Plus Linear Systems"
     authors: <strong>Guilherme Espindola-Winck</strong>, Laurent Hardouin, Mehdi Lhommeau 
