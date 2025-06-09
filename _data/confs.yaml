@@ -3,7 +3,8 @@ main:
   - title: "Parametric curve-based State-Space Representation for Shape Control of Soft-Continuum Manipulators"
     authors: Loic Bal, Steeve Mbakop, <strong>Guilherme Espindola-Winck</strong>, Christophe Sueur, Rochdi Merzouki
     conference_short: RoboSoft 2025
-    conference: 8th IEEE-RAS International Conference on Soft Robotics (RoboSoft 2025), Lausanne, Switzerland <span style="color:red;">To Appear</span>
+    conference: 8th IEEE-RAS International Conference on Soft Robotics (RoboSoft 2025), Lausanne, Switzerland
+    doi: http://dx.doi.org/10.1109/RoboSoft63089.2025.11020909
 
   - title: "Towards a Comfortable Model-based Control of a fleet of Communicated wheelchairs"
     authors: Yehya Sharif, Gilles Tagne, Meziane Labri, <strong>Guilherme Espindola</strong>, Rochdi Merzouki, Christophe Sueur
