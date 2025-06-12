@@ -1,5 +1,9 @@
 main:
 
+  - title: "Cooperative Curve-Based Synchronized Control of a Fleet of Autonomous Robots"
+    authors: Loic Bal, Steeve Mbakop, <strong>Guilherme Espindola-Winck</strong>, Christophe Sueur, Rochdi Merzouki
+    conference: 2025, IEEE/ASME TRANSACTIONS ON MECHATRONICS <span style="color:red;">To Appear</span>
+
   - title: "SMT-Based and Fixed-Point Approaches for State Estimation in Max-Plus Linear Systems"
     authors: <strong>Guilherme Espindola-Winck</strong>, Laurent Hardouin, Mehdi Lhommeau
     conference: 2025, Journal of Discrete Event Dynamic Systems 
