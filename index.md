@@ -16,6 +16,6 @@ His main research interests include **idempotent semirings** and their applicati
 
 {% include_relative _includes/services.md %}
 
-{% include_relative _includes/responsibilities.md %}
+{% include_relative _includes/responsabilities.md %}
 
 {% include_relative _includes/contact.md %}
