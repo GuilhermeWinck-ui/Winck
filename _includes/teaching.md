@@ -16,6 +16,8 @@
 <ul>
   <b> Industrial Innovation: </b><br>
   -Modeling and Performance Evaluation of Production Systems using Discrete Event System Simulation<br>
+  <b> Project: </b><br>
+  -Robotics and Automation<br>
 </ul>
 
 <p><a href="https://ecole.centralelille.fr">Ecole Centrale de Lille</a><p/>
