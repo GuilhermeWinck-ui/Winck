@@ -3,7 +3,7 @@
 <h2 style="margin: 60px 0px 10px;">Services</h2>
 
 <ul style="margin:0 0 5px;">
-  I serve or I have served as reviewer for the following journals/conferences: <a href="https://www.sciencedirect.com/journal/automatica">Automatica
+  I serve or I have served as reviewer for the following journals: <a href="https://www.sciencedirect.com/journal/automatica">Automatica
 </a>, 
 <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8856">IEEE T-ASE
 </a>, 
@@ -17,8 +17,9 @@
 ">WODES
 </a>, <a href="https://sssc-tds-cosy-2025.sciencesconf.org
 ">IFAC Joint Conference SSSC 2025 - TDS 2025 - COSY 2025
-</a> and <a href="https://icmre.org
+</a>, <a href="https://icmre.org
 ">ICMRE
+</a> and <a href="https://icsc.conference.univ-poitiers.fr">ICSC
 </a>.
 </ul>
 
