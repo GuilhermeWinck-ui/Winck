@@ -12,7 +12,11 @@
 </a>,
 <a href="https://onlinelibrary.wiley.com/journal/10991239
 ">International Journal of Robust and Nonlinear Control
-</a> and the conferences 
+</a>,
+<a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6221036
+">IEEE Transactions on Cybernetics
+</a>
+  and the conferences 
 <a href="https://www.alessandro-giua.it/WODES/
 ">WODES
 </a>, <a href="https://sssc-tds-cosy-2025.sciencesconf.org
