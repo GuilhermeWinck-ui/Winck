@@ -25,7 +25,7 @@
   <b> Automation / Control Engineering: </b><br>
   -Automation (PLC programming) <br>
   -Supervision of Industrial Systems<br>
-  <b> Computer / Systems / Control Engineering: </b><br>
+  <b> Computer / Systems Engineering: </b><br>
   -Petri Nets, Max-Plus algebra and Automata Theory<br>
   <b> Production / Industrial Engineering: </b><br>
   -Modeling and Performance Evaluation of Production Systems<br>
