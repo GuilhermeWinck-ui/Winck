@@ -8,7 +8,7 @@
   -Automation (PLC programming) <br>
   -Industrial Local Networks and Distributed Automation<br>
   -Supervision of Industrial Systems<br>
-  <b> Computer / Systems Engineering: </b><br>
+  <b> Computer Science: </b><br>
   -Petri Nets <br>
 </ul>
 
@@ -25,7 +25,7 @@
   <b> Automation / Control Engineering: </b><br>
   -Automation (PLC programming) <br>
   -Supervision of Industrial Systems<br>
-  <b> Computer / Systems Engineering: </b><br>
+  <b> Computer Science: </b><br>
   -Petri Nets, Max-Plus algebra and Automata Theory<br>
   <b> Production / Industrial Engineering: </b><br>
   -Modeling and Performance Evaluation of Production Systems<br>
