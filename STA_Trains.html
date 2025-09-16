@@ -98,17 +98,17 @@
           console.log(Speed.reduce((a, b) => a + b, 0) / Speed.length)
       }
 
-      // do it in the Car class
+      // do it in the Car class in the future !
       for (var i=0; i<List_of_Cars.length;i++){
         if (i<List_of_Cars.length-1){
           if (List_of_Cars[i+1].dist-List_of_Cars[i].dist>D[i]+50) {
               // console.log("speed of", Colors[i],"can be increased")
-              V[i]+=0.001
+              V[i]+=0.01
           }
         }else{
             if (List_of_Cars[List_of_Cars.length-1].dist-List_of_Cars[0].dist>D[List_of_Cars.length-1]+50) {
               // console.log("speed of", Colors[List_of_Cars.length-1],"can be increased")
-              V[i]+=0.001
+              V[i]+=0.01
           }
         }
       }
@@ -205,3 +205,4 @@
 
 </script>
 </html>
+
