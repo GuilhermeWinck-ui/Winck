@@ -18,7 +18,7 @@
   <b> Production / Industrial Engineering: </b><br>
   -Modeling and Performance Evaluation of Production Systems<br>
   <b> Project: </b><br>
-  -Robotics and Automation<br>
+  -Robotics and Control & Automation<br>
 </ul>
 
 <p><a href="https://ecole.centralelille.fr">Ecole Centrale de Lille</a><p/>
