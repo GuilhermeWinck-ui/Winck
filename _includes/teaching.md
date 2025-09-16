@@ -10,6 +10,7 @@
   -Supervision of Industrial Systems<br>
   <b> Computer Science: </b><br>
   -Petri Nets <br>
+  -C programming 
 </ul>
 
 <p><a href="https://iteem.centralelille.fr">ITEEM</a><p/>
@@ -27,9 +28,8 @@
   -Supervision of Industrial Systems<br>
   <b> Computer Science: </b><br>
   -Petri Nets, Max-Plus algebra and Automata Theory<br>
-  <b> Production / Industrial Engineering: </b><br>
-  -Modeling and Performance Evaluation of Production Systems<br>
-  <b> Computer Science: </b><br>
   -High Level Python Programming<br>
   -Machine Learning and Deep Learning<br>
+  <b> Production / Industrial Engineering: </b><br>
+  -Modeling and Performance Evaluation of Production Systems<br>
 </ul>
