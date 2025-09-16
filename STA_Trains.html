@@ -103,12 +103,16 @@
         if (i<List_of_Cars.length-1){
           if (List_of_Cars[i+1].dist-List_of_Cars[i].dist>D[i]+50) {
               // console.log("speed of", Colors[i],"can be increased")
+              if (V[i]<20){
               V[i]+=0.01
+              }
           }
         }else{
             if (List_of_Cars[List_of_Cars.length-1].dist-List_of_Cars[0].dist>D[List_of_Cars.length-1]+50) {
               // console.log("speed of", Colors[List_of_Cars.length-1],"can be increased")
-              V[i]+=0.01
+              if (V[List_of_Cars.length-1]<20){
+              V[List_of_Cars.length-1]+=0.01
+              }
           }
         }
       }
@@ -205,6 +209,7 @@
 
 </script>
 </html>
+
 
 
 
