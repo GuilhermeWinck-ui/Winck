@@ -3,6 +3,7 @@
 <h2 style="margin: 30px 0px 10px;">Teaching</h2>
 
 My primary teaching focus is in the field of <b> Control & Automation Engineering </b>, but I also teach other topics, as described below:
+<br><br>
 
 <p><a href="https://ig2i.centralelille.fr">IG2I</a><p/>
 <ul>
