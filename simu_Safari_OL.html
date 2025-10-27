@@ -97,6 +97,16 @@ $(document).ready(function() {
  	InitTEG(); 	
  	UpdateFig();
 
+  // Open Loop (infinite tokens)
+  $svg = $("#myget");
+  $('#tx1u1',$svg).show();
+  $('#tx1u1',$svg).text("+oo");
+
+  // Open Loop (infinite tokens)
+  $svg = $("#myget");
+  $('#tx3u2',$svg).show();
+  $('#tx3u2',$svg).text("+oo");
+
   // init clock slider
   slider = document.getElementById("sliderClock");
   CLOCK = slider.value; 
@@ -192,7 +202,7 @@ function Animation() {
        //x4(t)=x2(t-t21) -> t21 : sliderD
        X[3][TmaxX] = X[2][TmaxX-sliderD.value];
        //x1(t)=min(u1(t),1+x1(t-t11),1+x4(t-s12)) -> t11 : sliderA ; s12 : sliderE
-       X[0][TmaxX] = Math.min(10000+U[0][TmaxU], 1 + X[0][TmaxX-sliderA.value], 1 + X[3][TmaxX-sliderE.value]);
+       X[0][TmaxX] = Math.min(10000, 1 + X[0][TmaxX-sliderA.value], 1 + X[3][TmaxX-sliderE.value]);
        
        //x2(t)=x1(t-t12) -> t12 : sliderB
        X[1][TmaxX] = X[0][TmaxX-sliderB.value];
