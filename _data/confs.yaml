@@ -4,6 +4,7 @@ main:
     authors: Loic Bal, Steeve Mbakop, <strong>Guilherme Espindola-Winck</strong>, Christophe Sueur, Rochdi Merzouki
     conference_short: RoboSoft 2025
     conference: 8th IEEE-RAS International Conference on Soft Robotics (RoboSoft 2025), Lausanne, Switzerland
+    bibtex: https://hal.science/hal-05403080v1/bibtex
     doi: http://dx.doi.org/10.1109/RoboSoft63089.2025.11020909
 
   - title: "Towards a Comfortable Model-based Control of a fleet of Communicated wheelchairs"
