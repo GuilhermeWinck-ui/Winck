@@ -1,5 +1,19 @@
 main:
 
+  - title: "Application de la déquantification de Maslov pour l'étude des systèmes à événements discrets"
+    authors: <strong>Guilherme Espindola-Winck</strong>, Laurent Hardouin, Mehdi Lhommeau, Benoît Trouillet 
+    conference_short: MSR 25
+    conference: Modélisation des Systèmes Réactifs (MSR 25), 2O25, Reims, France
+    pdf: https://hal.science/hal-05390007v1/document
+    bibtex: https://hal.science/hal-05390007v1/bibtex
+
+  - title: "Modélisation du transport de fret multimodal par Réseau de Petri de Haut Niveau, pour la résilience des ports maritimes Européens"
+    authors: Armand Toguyéni, <strong>Guilherme Espindola-Winck</strong>,, Benoît Trouillet, Rochdi Merzouki
+    conference_short: MSR 25
+    conference: Modélisation des Systèmes Réactifs (MSR 25), 2O25, Reims, France
+    pdf: https://hal.science/hal-05390010v1/document
+    bibtex: https://hal.science/hal-05390010v1/bibtex
+    
   - title: "Sur l'estimation d'état des systèmes max-plus"
     authors: <strong>Guilherme Espindola-Winck</strong>, Laurent Hardouin, Mehdi Lhommeau
     conference_short: MSR 21
