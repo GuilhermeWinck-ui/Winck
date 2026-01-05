@@ -8,7 +8,7 @@ main:
     bibtex: https://hal.science/hal-05390007v1/bibtex
 
   - title: "Modélisation du transport de fret multimodal par Réseau de Petri de Haut Niveau, pour la résilience des ports maritimes Européens"
-    authors: Armand Toguyéni, <strong>Guilherme Espindola-Winck</strong>,, Benoît Trouillet, Rochdi Merzouki
+    authors: Armand Toguyéni, <strong>Guilherme Espindola-Winck</strong>, Benoît Trouillet, Rochdi Merzouki
     conference_short: MSR 25
     conference: Modélisation des Systèmes Réactifs (MSR 25), 2O25, Reims, France
     pdf: https://hal.science/hal-05390010v1/document
