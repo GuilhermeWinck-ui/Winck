@@ -11,6 +11,7 @@ main:
     authors: Yehya Sharif, Gilles Tagne, Meziane Labri, <strong>Guilherme Espindola</strong>, Rochdi Merzouki, Christophe Sueur
     conference_short: ICMRE 2025
     conference: 11th International Conference on Mechatronics and Robotics Engineering (ICMRE 2025), Lille, France 
+    bibtex: https://hal.science/hal-05403085v1/bibtex
     doi: https://doi.org/10.1109/ICMRE64970.2025.10976288
 
   - title: "Comparing Disjunctive and Concise Approaches for Set-Guaranteed Estimation in Max-Plus Linear Systems"
