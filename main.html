@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Ecole SED 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .sidebar { background-color: #1e293b; border-right: 1px solid #334155; }
+        .video-card { background-color: #1e293b; transition: all 0.3s ease; border: 1px solid #334155; border-radius: 1rem; overflow: hidden; cursor: pointer; }
+        .video-card:hover { transform: translateY(-5px); border-color: #3b82f6; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+        .gradient-overlay { background: linear-gradient(0deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0) 100%); }
+    </style>
+</head>
+<body class="flex h-screen overflow-hidden">
+
+    <aside class="sidebar w-64 flex-shrink-0 p-6 flex flex-col">
+        <div class="flex items-center gap-3 text-blue-500 mb-10 px-2">
+            <i class="fas fa-play-circle text-3xl"></i>
+            <span class="text-xl font-bold text-white tracking-tight uppercase">Ecole SED 2026</span>
+        </div>
+        <nav class="space-y-2">
+            <div class="flex items-center gap-3 py-3 px-4 rounded-xl bg-blue-600 text-white shadow-lg">
+                <i class="fas fa-th-large"></i> Dashboard
+            </div>
+        </nav>
+    </aside>
+
+    <main class="flex-1 flex flex-col bg-slate-900 overflow-hidden">
+        <header class="h-20 flex items-center justify-between px-10 border-b border-slate-800">
+            <h2 class="text-2xl font-bold text-white">Sessions Enregistrées</h2>
+            <span id="counter" class="text-xs font-mono text-slate-500 bg-slate-800 px-3 py-1 rounded-full italic"></span>
+        </header>
+
+        <div class="p-10 overflow-y-auto">
+            <div id="video-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
+        </div>
+    </main>
+
+    <script>
+        // --- CONFIGURATION DES SESSIONS ---
+        // Pour le Cloud (Nextcloud), ajoute urlSlides et urlCamera (avec /download à la fin)
+        const mesSessions = [
+			{ 
+				id: 'MEDIA260325074641664', 
+				titre: 'Ouverture - Session 1',
+				// Si tu es sur le cloud, décommente et remplis les lignes ci-dessous :
+				cloudSlides: 'https://nextcloud.univ-lille.fr/index.php/s/ysStTzmQF7579JR/download',
+				cloudCamera: 'https://nextcloud.univ-lille.fr/index.php/s/Z6BiXQKB8CL9FaY/download'
+			},
+			{ 
+				id: 'MEDIA260325075737399', 
+				titre: 'INTRO/Stochastique - Session 2',
+				cloudSlides: 'https://nextcloud.univ-lille.fr/index.php/s/q4zJASP9Z9wFnpa/download',
+				cloudCamera: 'https://nextcloud.univ-lille.fr/index.php/s/ys5q6pCjyimZfeC/download'
+			},
+			{ 
+				id: 'MEDIA260325082923117', 
+				titre: 'INTRO/Hybride - Session 2',
+				cloudSlides: 'https://nextcloud.univ-lille.fr/index.php/s/HorGGxdSGc6SEXW/download',
+				cloudCamera: 'https://nextcloud.univ-lille.fr/index.php/s/xkfs2rs5NgmWY9y/download'
+			},
+			{ 
+				id: 'MEDIA260325095531078', 
+				titre: 'Rappels Proba - Session 3',
+				cloudSlides: 'https://nextcloud.univ-lille.fr/index.php/s/PMmaM4j865LgtZp/download',
+				cloudCamera: 'https://nextcloud.univ-lille.fr/index.php/s/XmAT8AgyN94WxNN/download'
+			},
+			{ 
+				id: 'MEDIA260325122618633', 
+				titre: 'Processus Stochastiques et SPN - Session 4',
+				cloudSlides: 'https://nextcloud.univ-lille.fr/index.php/s/jsgsAL32f6A6eBL/download',
+				cloudCamera: 'https://nextcloud.univ-lille.fr/index.php/s/5YB9b3sFo5roCto/download'
+			},
+			{ 
+				id: 'MEDIA260326075659176', 
+				titre: 'Réseaux d automates stochastiques - Session 5',
+				cloudSlides: 'https://nextcloud.univ-lille.fr/index.php/s/XbfLPrcX4Za6djy/download',
+				cloudCamera: 'https://nextcloud.univ-lille.fr/index.php/s/GjzQgQQkC4Eiwcx/download'
+			},
+			{ 
+				id: 'MEDIA260326094955791', 
+				titre: 'SED Hybrides - Session 6',
+				cloudSlides: 'https://nextcloud.univ-lille.fr/index.php/s/LNa29Go4wDzoiks/download',
+				cloudCamera: 'https://nextcloud.univ-lille.fr/index.php/s/gqwYWJ8CrRzwScF/download'	
+			},
+			{ 
+				id: 'MEDIA260326121920528', 
+				titre: 'Panel de doctorants - Session 7',
+				cloudSlides: 'https://nextcloud.univ-lille.fr/index.php/s/Rs5X9zkDbYD92i4/download',
+				cloudCamera: 'https://nextcloud.univ-lille.fr/index.php/s/FDeBgrQ4t5PopBy/download'
+			},
+			{ 
+				id: 'MEDIA260326133837121', 
+				titre: 'Stopwatch et RdP hybrides linéaires - Session 8',
+				cloudSlides: 'https://nextcloud.univ-lille.fr/index.php/s/QgYze8NcJDEi4pP/download',
+				cloudCamera: 'https://nextcloud.univ-lille.fr/index.php/s/Ed7aDq4dkWjtcY4/download'
+			},
+			{ 
+				id: 'MEDIA260327081243681', 
+				titre: 'Estimation d état des SED stochastiques et application à la détection de cyber-attaques - Session 9',
+				cloudSlides: 'https://nextcloud.univ-lille.fr/index.php/s/TbEQHADQ4BoZkx5/download',
+				cloudCamera: 'https://nextcloud.univ-lille.fr/index.php/s/dk946jQWEJiboSG/download'
+			},
+			{ 
+				id: 'MEDIA260327093924072', 
+				titre: 'SdF via RdP Stochastiques et Application au Ferroviaire - Session 10',
+				cloudSlides: 'https://nextcloud.univ-lille.fr/index.php/s/PAKcc2HRgbKJMyz/download',
+				cloudCamera: 'https://nextcloud.univ-lille.fr/index.php/s/8nssiWtqj3xfDgN/download'
+			}
+        ];
+
+        function genererCartes() {
+            const grid = document.getElementById('video-grid');
+            document.getElementById('counter').innerText = `${mesSessions.length} SESSIONS`;
+
+            mesSessions.forEach(session => {
+                const cheminFolder = `../all/${session.id}`;
+                
+                // Préparation des paramètres pour le player
+                let playerUrl = `player.html?id=${session.id}`;
+                if(session.cloudSlides) {
+                    playerUrl += `&cSlides=${encodeURIComponent(session.cloudSlides)}&cCam=${encodeURIComponent(session.cloudCamera)}`;
+                }
+                
+                const cardHtml = `
+                    <div class="video-card group" onclick="window.location.href='${playerUrl}'">
+                        <div class="relative h-48">
+                            <img src="${cheminFolder}/preview.jpg" 
+                                 class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-500"
+                                 onerror="this.src='https://via.placeholder.com/400x225/1e293b/475569?text=Image+Indisponible'">
+                            <div class="gradient-overlay absolute inset-0"></div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl">
+                                    <i class="fas fa-play ml-1"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-slate-100 group-hover:text-blue-400 transition mb-1 truncate">${session.titre}</h3>
+                            <p class="text-[10px] text-slate-500 font-mono italic">${session.id}</p>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += cardHtml;
+            });
+        }
+        genererCartes();
+    </script>
+</body>
+</html>

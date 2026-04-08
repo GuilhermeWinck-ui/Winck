@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecteur Ecole SED 2026 - Multi-Vues</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body { background-color: #000; color: #fff; margin: 0; overflow: hidden; font-family: 'Inter', sans-serif; }
+        
+        .player-viewport { 
+            position: relative; width: 100vw; height: calc(100vh - 80px); 
+            display: flex; align-items: center; justify-content: center; background: #000;
+            transition: all 0.5s ease;
+        }
+        
+        video { background: #111; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); max-height: 100%; }
+
+        /* --- MODES D'AFFICHAGE --- */
+
+        /* 1. PIP (Incrustation) */
+        .view-pip #vS { width: 100%; height: 100%; object-fit: contain; }
+        .view-pip .cam-container { 
+            position: absolute; bottom: 20px; right: 20px; width: 320px; 
+            border: 2px solid #3b82f6; border-radius: 12px; overflow: hidden; z-index: 10; box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        /* 2. COTE A COTE */
+        .view-side { flex-direction: row; gap: 15px; padding: 20px; }
+        .view-side #vS, .view-side .cam-container { width: 48%; height: auto; max-height: 90%; object-fit: contain; position: relative; bottom: auto; right: auto; border: none; }
+
+        /* 3. FOCUS DIAPOS */
+        .view-slides-only .cam-container { display: none; }
+        .view-slides-only #vS { width: 100%; height: 100%; object-fit: contain; }
+
+        /* 4. FOCUS CAMERA */
+        .view-cam-only #vS { display: none; }
+        .view-cam-only .cam-container { width: 100%; height: 100%; position: relative; bottom: auto; right: auto; border: none; }
+        .view-cam-only #vC { width: 100%; height: 100%; object-fit: contain; }
+
+        /* Barre de contrôle stylisée */
+        .controls-bar { 
+            height: 80px; background: #0f172a; display: flex; align-items: center; 
+            padding: 0 40px; border-top: 1px solid #334155; justify-content: space-between;
+        }
+        .btn-view { padding: 10px 15px; border-radius: 8px; background: #1e293b; color: #94a3b8; border: 1px solid #334155; transition: 0.3s; }
+        .btn-view:hover, .btn-view.active { background: #3b82f6; color: white; border-color: #60a5fa; }
+        
+        .back-link { position: absolute; top: 20px; left: 20px; z-index: 100; background: rgba(30, 41, 59, 0.8); padding: 8px 15px; border-radius: 8px; color: white; text-decoration: none; border: 1px solid #475569; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <a href="main.html" class="back-link"><i class="fas fa-arrow-left mr-2"></i> Dashboard</a>
+
+    <div id="viewport" class="player-viewport view-pip">
+        <video id="vS" controls muted playsinline></video>
+        
+        <div class="cam-container">
+            <video id="vC" controls playsinline class="w-full"></video>
+        </div>
+    </div>
+
+    <div class="controls-bar">
+        <div class="flex items-center gap-4">
+            <div class="bg-blue-600/10 text-blue-400 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-blue-500/20">
+                Mode Multi-Flux Actif
+            </div>
+            <p class="text-[11px] text-slate-500 italic">L'audio est géré par le lecteur de l'orateur.</p>
+        </div>
+
+        <div class="flex gap-3">
+            <button class="btn-view active" onclick="changeView('view-pip', this)" title="Incrustation"><i class="fas fa-window-restore"></i></button>
+            <button class="btn-view" onclick="changeView('view-side', this)" title="Côte à côte"><i class="fas fa-columns"></i></button>
+            <button class="btn-view" onclick="changeView('view-slides-only', this)" title="Diapos"><i class="fas fa-desktop"></i></button>
+            <button class="btn-view" onclick="changeView('view-cam-only', this)" title="Orateur"><i class="fas fa-user"></i></button>
+        </div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const cS = params.get('cSlides');
+        const cC = params.get('cCam');
+        const id = params.get('id');
+
+        const vS = document.getElementById('vS');
+        const vC = document.getElementById('vC');
+        const viewport = document.getElementById('viewport');
+
+        // --- CHARGEMENT ---
+        if(cS && cC) {
+            vS.src = decodeURIComponent(cS);
+            vC.src = decodeURIComponent(cC);
+        } else {
+            const base = `../all/${id}/multimedia`;
+            vS.src = `${base}/${id}screen.mp4`;
+            vC.src = `${base}/${id}.mp4`;
+        }
+
+        // --- SYNCHRONISATION AUTOMATIQUE ---
+        
+        // Quand on fait Play sur les slides, l'orateur suit
+        vS.onplay = () => {
+            vC.currentTime = vS.currentTime;
+            vC.play();
+        };
+
+        // Quand on fait Pause sur les slides, l'orateur s'arrête
+        vS.onpause = () => vC.pause();
+
+        // Quand on déplace le curseur de temps sur les slides
+        vS.onseeking = () => {
+            vC.currentTime = vS.currentTime;
+        };
+
+        // Sécurité : recalage toutes les 2 secondes si dérive
+        setInterval(() => {
+            if (!vS.paused && Math.abs(vS.currentTime - vC.currentTime) > 0.5) {
+                vC.currentTime = vS.currentTime;
+            }
+        }, 2000);
+
+        // --- GESTION DES VUES ---
+        function changeView(mode, btn) {
+            viewport.className = "player-viewport " + mode;
+            document.querySelectorAll('.btn-view').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        // Gestion d'erreur locale (frag)
+        vC.onerror = () => {
+            if (!cC && vC.src.includes('.mp4') && !vC.src.includes('_frag')) {
+                vC.src = vC.src.replace('.mp4', '_frag.mp4');
+            }
+        };
+    </script>
+</body>
+</html>
