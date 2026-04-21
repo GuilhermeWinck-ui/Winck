@@ -28,12 +28,12 @@
 </ul>
 
 <ul style="margin:0 0 5px;">
-  I am a member of the Technical/Programme Committee for the following conferences: <a href="https://msr2025.sciencesconf.org">MSR (french workshop)
+  I am a current and past member of the Technical/Programme Committee for the following conferences: <a href="https://msr2025.sciencesconf.org">MSR (french workshop)
 </a> and <a href="https://icmre.org">ICMRE
 </a>.
 </ul>
 
 <ul style="margin:0 0 5px;">
-  I am a member of the Technical/Programme Committee and an instructor for the french summer school on Discrete Event Systems: <a href="https://ecolesed2025.ls2n.fr">Ecole SED (CT SED de la SAGIP)
+  I am a member of the Technical/Programme Committee and an instructor for the french summer school on Discrete Event Systems: <a href="https://sed.ls2n.fr/ecoles-sed/">Ecole SED (CT SED de la SAGIP). I organized the 3rd edition in Lille.
 </a>.
 </ul>
