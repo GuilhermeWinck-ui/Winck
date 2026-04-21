@@ -34,6 +34,6 @@
 </ul>
 
 <ul style="margin:0 0 5px;">
-  I am a member of the Technical/Programme Committee and an instructor for the french summer school on Discrete Event Systems: <a href="https://sed.ls2n.fr/ecoles-sed/">Ecole SED (CT SED de la SAGIP). I organized the 3rd edition in Lille.
-</a>.
+  I am a member of the Technical/Programme Committee and an instructor for the french summer school on Discrete Event Systems: <a href="https://sed.ls2n.fr/ecoles-sed/">Ecole SED (CT SED de la SAGIP)
+</a>. I organized the 3rd edition in Lille.
 </ul>
