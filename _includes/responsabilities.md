@@ -7,6 +7,6 @@
 </a>.
 </ul>
 <ul style="margin:0 0 5px;">
-  I am the co-coordinator for first- and second-year internships (LE1 and LE2) in the preparatory cycle at <a href="https://ig2i.centralelille.fr">IG2I 
+  I am the co-coordinator for first- and second-year internships (LE1 and LE2) in the preparatory cycle at <a href="https://ig2i.centralelille.fr/ig2i/stages-entreprise/">IG2I 
   </a>.
 </ul>
