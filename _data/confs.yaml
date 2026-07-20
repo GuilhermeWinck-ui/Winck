@@ -1,5 +1,13 @@
 main:
 
+  - title: "Initial Condition Synthesis for Balanced Polytopic Timed Event Graphs"
+    authors: <strong>Guilherme Espindola-Winck</strong>, Carlos Andrey-Maia, Armand Toguyéni
+    conference_short: WODES 2026
+    conference: 18th IEEE Workshop on Discrete Event Systems (WODES 2026), Eindhoven, Netherlands
+    pdf: https://hal.science/hal-05697075v1/document
+    bibtex: https://hal.science/hal-05697075v1/bibtex
+    doi: https://hal.science/hal-05697075v1/bibtex
+
   - title: "Parametric curve-based State-Space Representation for Shape Control of Soft-Continuum Manipulators"
     authors: Loic Bal, Steeve Mbakop, <strong>Guilherme Espindola-Winck</strong>, Christophe Sueur, Rochdi Merzouki
     conference_short: RoboSoft 2025
@@ -15,9 +23,9 @@ main:
     doi: https://doi.org/10.1109/ICMRE64970.2025.10976288
 
   - title: "Comparing Disjunctive and Concise Approaches for Set-Guaranteed Estimation in Max-Plus Linear Systems"
-    authors: <strong>Guilherme Espindola-Winck</strong>, Laurent Hardouin, Mehdi Lhommeau 
-    conference_short: WODES 2024
-    conference: 17th IFAC Workshop on Discrete Event Systems (WODES 2024), Rio de Janeiro, Brazil
+    authors: <strong>Guilherme Espindola-Winck</strong>, Carlos Andrey-Maia, Armand Toguyéni
+    conference_short: WODES 2026
+    conference: 18th IEEE Workshop on Discrete Event Systems (WODES 2026), Eindhoven, Netherlands
     pdf: https://univ-angers.hal.science/hal-04653065v1/document
     bibtex: https://univ-angers.hal.science/hal-04653065v1/bibtex
     doi: https://doi.org/10.1016/j.ifacol.2024.07.007
