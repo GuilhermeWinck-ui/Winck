@@ -6,7 +6,7 @@ main:
     conference: 18th IEEE Workshop on Discrete Event Systems (WODES 2026), Eindhoven, Netherlands
     pdf: https://hal.science/hal-05697075v1/document
     bibtex: https://hal.science/hal-05697075v1/bibtex
-    doi: https://hal.science/hal-05697075v1/bibtex
+    doi: https://doi.org/10.1109/WODES69290.2026.11598244
 
   - title: "Parametric curve-based State-Space Representation for Shape Control of Soft-Continuum Manipulators"
     authors: Loic Bal, Steeve Mbakop, <strong>Guilherme Espindola-Winck</strong>, Christophe Sueur, Rochdi Merzouki
