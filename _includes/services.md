@@ -15,7 +15,7 @@
 </a>,
 <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6221036
 ">IEEE Transactions on Cybernetics
-</a>
+</a>,
 <a href="https://www.sciencedirect.com/journal/fuzzy-sets-and-systems">Fuzzy Sets and Systems
 </a>
   and the conferences 
