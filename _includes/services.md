@@ -17,6 +17,8 @@
 ">IEEE Transactions on Cybernetics
 </a>,
 <a href="https://www.sciencedirect.com/journal/fuzzy-sets-and-systems">Fuzzy Sets and Systems
+</a>, 
+  <a href="https://link.springer.com/journal/40313">JCAES
 </a>
   and the conferences 
 <a href="https://www.alessandro-giua.it/WODES/
