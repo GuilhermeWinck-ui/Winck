@@ -10,3 +10,7 @@
   I am the co-coordinator for first- and second-year internships (LE1 and LE2) in the preparatory cycle at <a href="https://ig2i.centralelille.fr/ig2i/stages-entreprise/">IG2I 
   </a>.
 </ul>
+<ul style="margin:0 0 5px;">
+  I am the responsible for the final study internship of the Systems Engineering (SE) option at <a href="https://ecpknfr.buaa.edu.cn/">Ecole Centrale de Pékin (ECPk) of Beihang University
+  </a>.
+</ul>
