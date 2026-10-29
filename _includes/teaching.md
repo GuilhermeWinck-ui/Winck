@@ -24,7 +24,7 @@ My primary teaching focus is in the field of <b> Control & Automation Engineerin
   -Robotics and Control & Automation<br>
 </ul>
 
-<p><a href="https://ecole.centralelille.fr">Ecole Centrale de Lille</a><p/>
+<p><a href="https://ecole.centralelille.fr">EC Lille</a><p/>
 <ul>
   <b> Automation / Control Engineering: </b><br>
   -Automation (PLC programming) <br>
