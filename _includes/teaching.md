@@ -36,3 +36,11 @@ My primary teaching focus is in the field of <b> Control & Automation Engineerin
   <b> Production / Industrial Engineering: </b><br>
   -Modeling and Performance Evaluation of Production Systems<br>
 </ul>
+
+<p><a href="https://ecpknfr.buaa.edu.cn">ECPk (Beihang University - China)</a><p/>
+<ul>
+  <b> Computer Science: </b><br>
+  -Petri Nets, Max-Plus algebra and Automata Theory<br>
+  <b> Production / Industrial Engineering: </b><br>
+  -Modeling and Performance Evaluation of Production Systems<br>
+</ul>
