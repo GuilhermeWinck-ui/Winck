@@ -11,6 +11,6 @@
   </a>.
 </ul>
 <ul style="margin:0 0 5px;">
-  I am responsible for the final-year internship of the Systems Engineering (SE) option at <a href="https://ecpknfr.buaa.edu.cn/">Ecole Centrale de Pékin (ECPk) of Beihang University
+  I am responsible for the final-year internships for the Systems Engineering (SE) track at <a href="https://ecpknfr.buaa.edu.cn/">Ecole Centrale de Pékin (ECPk), Beihang University
   </a>.
 </ul>
