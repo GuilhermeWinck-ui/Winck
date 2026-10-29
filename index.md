@@ -10,7 +10,7 @@ Guilherme Espindola-Winck received his degree in Control and Automation Engineer
 
 His main research interests include **idempotent semirings** and their applications to **Discrete Event Systems** ([CT SED](https://sed.ls2n.fr)), with a particular focus on **stochastic** and **set-membership estimation**. 
 
-His is also interested in Control & Automation, Artificial Intelligence, Transportation and Production Systems.
+He is also interested in Control & Automation, Artificial Intelligence, Transportation, and Production Systems.
 
 {% include_relative _includes/publications.md %}
 
